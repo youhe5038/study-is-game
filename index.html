@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공부 게임</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>공부 게임</h1>
+    <p>현재 자유도: <span id="freedom">0</span></p>
+    <p>총 성공도: <span id="totalSuccess">0</span></p>
+
+    <h3>미션 완료</h3>
+    <button onclick="addMission('수학 문제', 60, '고난도')">수학 1시간(고난도)</button>
+    <button onclick="addMission('영어 단어', 30, '일반')">영어 30분(일반)</button>
+
+    <h3>보상 사용</h3>
+    <button onclick="useReward(60,'유튜브 30분')">유튜브 30분 (-60 자유도)</button>
+    <button onclick="useReward(50,'게임 30분')">게임 30분 (-50 자유도)</button>
+    <button onclick="useReward(60,'애니/영화 30분')">애니/영화 30분 (-60 자유도)</button>
+    <button onclick="useReward(10,'휴식 5분')">휴식 5분 (-10 자유도)</button>
+
+    <h3>미션 기록</h3>
+    <ul id="missionList"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
